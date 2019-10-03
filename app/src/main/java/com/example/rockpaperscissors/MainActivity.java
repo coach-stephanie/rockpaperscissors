@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
+/*import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;*/
 
 import java.util.Random;
 
@@ -107,9 +107,9 @@ public class MainActivity extends AppCompatActivity {
                 ++pcScore;
                 break;
             case 1:
-                //player tie
-                ++pcScore;
-                ++playerScore;
+                //player tie - no score changes
+                //++pcScore;
+                //++playerScore;
                 break;
             default:
                 //player win
@@ -133,6 +133,17 @@ public class MainActivity extends AppCompatActivity {
     public void scissors(View view) {
         playerImage.setImageDrawable(getResources().getDrawable(images[2]));
         play(2);
+    }
+
+    public void reset(View view) {
+        pcScore = 0;
+        playerScore = 0;
+        round = 0;
+        playerImage.setImageResource(android.R.color.transparent);
+        pcImage.setImageResource(android.R.color.transparent);
+        displayText.setText(String.format("Ready?"));
+        displayScore.setText(String.format("%d  -  %d", playerScore, pcScore));
+
     }
 
 

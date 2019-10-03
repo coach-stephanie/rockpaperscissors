@@ -9,4 +9,5 @@
     <string name="your_desc">Your choice</string>
     <string name="pc_desc">PC\'s choice of rock, paper, or scissors</string>
     <string name="score">0  -  0</string>
+    <string name="reset">Reset</string>
 </resources>
